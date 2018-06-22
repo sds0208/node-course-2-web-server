@@ -48,6 +48,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/page2', (req, res) => {
+  res.render('page2.hbs', {
+    pageTitle: 'Page 2',
+    page2Message: 'This is Page 2.'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to handle request'
